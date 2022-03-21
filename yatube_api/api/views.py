@@ -41,7 +41,6 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 
 class FollowViewSet(viewsets.ModelViewSet):
-    queryset = Follow.objects.all()
     serializer_class = FollowSerializer
     permissions_classes = (IsAuthenticatedOrReadOnly,)
     pagination_class = LimitOffsetPagination
